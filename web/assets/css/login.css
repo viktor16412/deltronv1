@@ -1,0 +1,288 @@
+/* Estilos generales para la sección de login */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa; /* Fondo general para móviles */
+}
+
+/* Columna de la imagen */
+.login-image-col {
+    position: relative;
+    height: 100vh;
+    background: var(--deltron-primary); /* Fondo de respaldo */
+}
+
+.login-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.login-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.85); /* Fondo más oscuro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.login-image-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.login-image-overlay p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Columna del formulario */
+.login-form-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 100vh;
+    position: relative;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    animation: slideUp 0.5s ease;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 1rem; /* Reducir espacio inferior */
+}
+
+.login-header h2 {
+    color: var(--deltron-primary);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.25rem; /* Reducir espacio entre título y subtítulo */
+}
+
+.login-header p {
+    color: var(--deltron-secondary);
+    font-size: 1rem;
+    margin-bottom: 2rem; /* Aumentar espacio después del subtítulo */
+}
+
+/* Ajustar margen superior del formulario */
+.login-form {
+    margin-top: 1.5rem;
+}
+
+/* Formulario */
+.login-form .form-label {
+    color: var(--deltron-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.login-form .form-control {
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-form .form-control:focus {
+    border-color: var(--deltron-accent);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.login-form .input-group-text {
+    background-color: #fff;
+    border: 2px solid #e9ecef;
+    border-right: none;
+    color: var(--deltron-secondary);
+    padding: 0 15px;
+}
+
+.login-form .input-group .form-control {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* Botón para mostrar contraseña */
+.toggle-password {
+    border: 2px solid #e9ecef;
+    border-left: none;
+    background: #fff;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-password:hover {
+    background: #f8f9fa;
+    color: var(--deltron-accent);
+}
+
+.toggle-password i {
+    transition: transform 0.3s ease;
+}
+
+/* Validación de campos */
+.login-form .form-control:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+.login-form .form-control:valid:not(:focus):not(:placeholder-shown) {
+    border-color: #28a745;
+}
+
+/* Botón de login */
+.btn-login {
+    background-color: var(--deltron-accent);
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-login:hover {
+    background-color: var(--deltron-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-login.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Alertas */
+.alert-danger {
+    background: #fee;
+    border: 2px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    animation: shake 0.4s ease;
+}
+
+.alert-danger i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .login-image-col {
+        display: none;
+    }
+    
+    .login-form-col {
+        height: auto;
+        padding: 4rem 0;
+        background: #f8f9fa;
+    }
+    
+    .login-section {
+        min-height: auto;
+    }
+    
+    .login-form-wrapper {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+}
+
+@media (max-width: 576px) {
+    .login-form-wrapper {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .login-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .login-image-overlay {
+        padding: 20px;
+    }
+    
+    .login-image-overlay h2 {
+        font-size: 2rem;
+    }
+}
+
+.login-image-wrapper {
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+.login-image {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.login-image.loaded {
+    opacity: 1;
+}

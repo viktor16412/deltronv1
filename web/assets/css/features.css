@@ -1,0 +1,86 @@
+/* Features Section - Estilos para la sección de beneficios */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--deltron-light);
+}
+
+.features-section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.features-section .section-title h2 {
+    color: var(--deltron-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.features-section .section-title p {
+    color: var(--deltron-secondary);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--deltron-accent);
+    font-size: 30px;
+}
+
+.feature-card h3 {
+    color: var(--deltron-primary);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--deltron-secondary);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features-section {
+        padding: 60px 0;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 25px;
+    }
+}

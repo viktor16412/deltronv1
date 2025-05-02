@@ -1,0 +1,151 @@
+.deltron-footer {
+    background-color: var(--deltron-dark);
+    color: white;
+    padding: 60px 0 0;
+}
+
+.footer-brand h3 {
+    color: var(--deltron-accent);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.footer-about {
+    color: #bdc3c7;
+    margin: 15px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--deltron-accent);
+}
+
+.footer-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--deltron-accent);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--deltron-accent);
+    padding-left: 5px;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.footer-contact li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: var(--deltron-accent);
+    width: 20px;
+}
+
+.newsletter h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #bdc3c7;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form button {
+    background: var(--deltron-accent);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding: 20px 0 0;
+    margin-top: 40px;
+}
+
+.copyright {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 0;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.payment-methods img {
+    height: 25px;
+    filter: grayscale(100%) brightness(150%);
+    transition: filter 0.3s;
+}
+
+.payment-methods img:hover {
+    filter: grayscale(0) brightness(100%);
+}
+
+@media (max-width: 767px) {
+    .payment-methods {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+}
